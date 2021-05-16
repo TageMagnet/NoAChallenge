@@ -1,0 +1,47 @@
+﻿@model List<NoaChallenge.Models.Color>
+
+@{
+    ViewBag.Title = "NoA";
+}
+    <div style="width: 70rem">
+
+        <h1>Pantone Colors</h1>
+        
+        <hr />
+        
+        <div style="background-color: lightcyan; width: 20rem; float: left; margin-right: 1rem">
+            <h2 style="margin-left: 0.5rem">Divisible by three</h2>
+
+            @for (int i = 0; i < ViewBag.DivisibleByThree.Count; i++)
+            {
+                <p style="margin-left: 0.5rem">
+                    <b>Color:</b> @ViewBag.DivisibleByThree[i].name <br />
+                    <b>Pantone value:</b> @ViewBag.DivisibleByThree[i].pantone_value <br />
+                    <b>Year:</b> @ViewBag.DivisibleByThree[i].year</p>
+            }
+        </div>
+
+        <div style="background-color: lightblue; width: 20rem; float: left; margin-right: 1rem">
+            <h2 style="margin-left: 0.5rem">Divisible by two</h2>
+
+            @for (int i = 0; i < ViewBag.DivisibleByTwo.Count; i++)
+            {
+                <p style="margin-left: 0.5rem">
+                    <b>Color:</b> @ViewBag.DivisibleByTwo[i].name <br />
+                    <b>Pantone value:</b> @ViewBag.DivisibleByTwo[i].pantone_value <br />
+                    <b>Year:</b> @ViewBag.DivisibleByThree[i].year</p>
+            }
+        </div>
+
+        <div style="background-color: lightgray; width: 20rem; float: left">
+            <h2 style="margin-left: 0.5rem">The rest</h2>
+
+            @for (int i = 0; i < ViewBag.TheRest.Count; i++)
+            {
+                <p style="margin-left: 0.5rem">
+                    <b>Color:</b> @ViewBag.TheRest[i].name <br />
+                    <b>Pantone value:</b> @ViewBag.TheRest[i].pantone_value <br />
+                    <b>Year:</b> @ViewBag.TheRest[i].year </p>
+            }
+        </div>
+    </div>
